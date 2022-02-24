@@ -1,0 +1,5 @@
+spring.application.name=Employee Management
+server.port=8080
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:db_leave_emp
+spring.datasource.username=root
+spring.datasource.password=root

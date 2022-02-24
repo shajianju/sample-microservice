@@ -1,0 +1,5 @@
+package com.eurekka.api.gateway.apigateway.globalfilter;
+
+public class LoggingFilter {
+
+}

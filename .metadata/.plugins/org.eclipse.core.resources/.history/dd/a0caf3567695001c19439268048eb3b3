@@ -1,0 +1,5 @@
+package com.eurekka.api.gateway.apigateway.config;
+
+public class APIGatewayConfig {
+
+}

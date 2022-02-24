@@ -1,0 +1,10 @@
+package com.leave.employee.serviceImpl;
+
+import com.leave.employee.service.EmployeeService;
+
+public class EmployServiceImpl implements EmployeeService{
+	
+	
+	
+
+}

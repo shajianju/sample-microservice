@@ -1,0 +1,19 @@
+package com.leave.employee.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.leave.employee.models.EmployBean;
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<EmployBean, Long>{
+
+	public List<EmployBean> listAll() throws EmployeeCustomException ;
+	public List<EmployBean> addEmp(EmployBean employBean) throws EmployeeCustomException ;
+	public EmployBean getEmp(long id) throws EmployeeCustomException ;
+	public EmployBean deleteEmp(long id) throws EmployeeCustomException ;
+
+
+}

@@ -1,0 +1,13 @@
+package com.eurekka.server.NamingServer.contoller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class CircuitBreakerControll {
+	//@Retry--Need to add dependencies
+	public String sampleApi() {
+		return new RestTemplate().getForEntity("", String.class).toString();
+	}
+
+}

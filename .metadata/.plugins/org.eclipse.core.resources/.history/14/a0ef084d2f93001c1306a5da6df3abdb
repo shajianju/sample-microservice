@@ -1,0 +1,10 @@
+package com.leave.employee.exceptionhandler;
+
+public class EmployeeCustomException extends Exception {
+
+	public void  EmployeeCustomException( String msg) {
+		super(msg);
+
+	}	
+
+}

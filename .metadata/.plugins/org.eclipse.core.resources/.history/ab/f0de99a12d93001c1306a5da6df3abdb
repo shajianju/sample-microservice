@@ -1,0 +1,58 @@
+package com.leave.employee.models;
+
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.validation.annotation.Validated;
+
+@Entity
+@Table(name = "TBL_EMPLOYEE")
+public class EmployBean {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long empId;
+	
+	@Column(name = "first_name",nullable = false,updatable = false)
+	private String firstName;
+	
+	@Column(name = "last_name",nullable = false,updatable = false)
+	private String lastName;
+	
+	@Column(name ="joined_date" ,nullable = false,updatable = false)
+	private Date joinedDate;
+	
+	@Column(name = "branch_location")
+	private String branchLocation;
+	
+	@Column(name = "base_location")
+	private String baseLocation;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name="acconunt_name")
+	private String accountName;
+	
+	@Column(name = "user_role")
+	private String role;
+	
+	@Column(name = "manager_id")
+	private Long managerId;
+	
+	
+	
+	
+	
+	
+	
+
+}

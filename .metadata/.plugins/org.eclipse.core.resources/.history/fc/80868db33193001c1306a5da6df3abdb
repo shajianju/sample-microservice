@@ -1,0 +1,63 @@
+package com.leave.employee.serviceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.leave.employee.exceptionhandler.EmployeeCustomException;
+import com.leave.employee.models.EmployBean;
+import com.leave.employee.models.EmployResponse;
+import com.leave.employee.repository.EmployeeRepository;
+import com.leave.employee.service.EmployeeService;
+
+public class EmployServiceImpl implements EmployeeService{
+	
+	@Autowired
+	private  EmployeeRepository repository;
+	
+	private  EmployResponse employResponse;
+
+	@Override
+	public EmployResponse listAll() {
+		
+		try {
+		
+		employResponse=new  EmployResponse();
+		
+		 repository.findAll();
+		
+		
+		}
+		
+		catch (EmployeeCustomException e) {
+			// TODO: handle exception
+		}
+		 
+		return employResponse;
+	}
+
+	@Override
+	public EmployResponse addEmp(EmployBean employBean)  {
+		// TODO Auto-generated method stub
+		return employResponse;
+	}
+
+	@Override
+	public EmployResponse getEmp(long id)  {
+		// TODO Auto-generated method stub
+		return employResponse;
+	}
+
+	@Override
+	public EmployResponse deleteEmp(long id)  {
+		// TODO Auto-generated method stub
+		return employResponse;
+	}
+
+	public EmployResponse getEmployResponse() {
+		return employResponse;
+	}
+
+	public void setEmployResponse(EmployResponse employResponse) {
+		this.employResponse = employResponse;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.leave.employee.exceptionhandler;
+
+public class EmployeeCustomException extends Exception {
+
+}

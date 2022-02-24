@@ -1,0 +1,18 @@
+package com.leave.employee.models;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmployBean {
+	
+	private String fname;
+	private String lname;
+	private String email;
+	private String joinedDate;
+	private String baselocation;
+	private String branch;
+	private String manager;
+	private String role;
+	
+
+}

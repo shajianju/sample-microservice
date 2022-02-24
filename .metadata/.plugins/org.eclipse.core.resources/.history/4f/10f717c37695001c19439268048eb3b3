@@ -1,0 +1,21 @@
+package com.eurekka.api.gateway.apigateway.config;
+
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+//Created for custom routing
+
+@Configuration
+public class APIGatewayConfig {
+	
+	
+	//To customize the route
+	@Bean
+	public RouteLocator gateWayRouter(RouteLocatorBuilder builder) {
+		return builder.routes().route(fun)
+				.build();
+	}
+
+}

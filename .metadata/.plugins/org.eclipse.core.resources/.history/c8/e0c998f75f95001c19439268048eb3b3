@@ -1,0 +1,5 @@
+package com.management.Leave.Management.models;
+
+public class EmployBean {
+
+}

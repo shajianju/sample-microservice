@@ -1,0 +1,21 @@
+package com.management.Leave.Management.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.management.Leave.Management.models.EmployBean;
+import com.management.Leave.Management.service.LeaveProxy;
+
+@RestController
+public class LeaveController {
+
+	
+	@Autowired
+	LeaveProxy leaveProxy;
+	
+	@GetMapping("/get")
+	public String get() {
+		return leaveProxy.getEmp().toString();
+	}
+}

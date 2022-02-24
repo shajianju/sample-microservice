@@ -1,0 +1,9 @@
+package com.leave.employee.exceptionhandler;
+
+public class EmployeeCustomException extends Exception {
+
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
+}

@@ -1,0 +1,42 @@
+package com.leave.employee.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.leave.employee.exceptionhandler.EmployeeCustomException;
+import com.leave.employee.models.EmployBean;
+import com.leave.employee.repository.EmployeeRepository;
+import com.leave.employee.service.EmployeeService;
+
+public class EmployServiceImpl implements EmployeeService{
+
+	@Autowired
+	EmployeeRepository repository;
+
+	@Override
+	public List<EmployBean> listAll() throws EmployeeCustomException {
+		return repository.findAll();
+	}
+
+	@Override
+	public List<EmployBean> addEmp(EmployBean employBean) throws EmployeeCustomException {
+		repository.save(employBean);
+		return repository.findAll();
+	}
+
+	@Override
+	public EmployBean getEmp(long id) throws EmployeeCustomException {
+
+		return repository.getById(id);
+	}
+
+	@Override
+	public void deleteEmp(long id) throws EmployeeCustomException {
+		return repository.deleteById(id);
+	}
+
+
+
+
+}

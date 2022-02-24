@@ -1,0 +1,50 @@
+package com.leave.employee.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.leave.employee.exceptionhandler.EmployeeCustomException;
+import com.leave.employee.models.EmployBean;
+import com.leave.employee.models.EmployResponse;
+import com.leave.employee.serviceImpl.EmployServiceImpl;
+import com.sun.net.httpserver.HttpServer;
+
+@Controller
+public class EmployeeController {
+
+	@Autowired
+	EmployServiceImpl employServiceImpl;
+
+	@GetMapping("/emp/leave/getAllEMP")
+	public EmployResponse getList(@RequestBody EmployBean bean) {
+
+		EmployResponse response=new EmployResponse();
+		List<EmployBean> emplList=null;
+		try {
+			emplList=employServiceImpl.listAll();
+			response=new EmployResponse(HttpStatus.CREATED, "SUCCESS", null, false, "List of employees", emplList);
+		} catch (EmployeeCustomException e) {
+			response=new EmployResponse(HttpStatus.INTERNAL_SERVER_ERROR, "FAILED", null, false, "No Records", null);
+		}
+		return response;
+
+	}
+
+	@PostMapping("/emp/leave/addEMP")
+	public EmployResponse addEmp(@RequestBody @Valid  EmployBean bean) {
+		EmployResponse response=new EmployResponse();
+		
+		
+
+		return response;
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.eurekka.api.gateway.apigateway.config;
+
+import org.springframework.context.annotation.Configuration;
+
+//Created for custom routing
+
+@Configuration
+public class APIGatewayConfig {
+	
+	public Rout
+
+}

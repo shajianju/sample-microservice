@@ -1,0 +1,19 @@
+package com.leave.employee.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.leave.employee.exceptionhandler.EmployeeCustomException;
+import com.leave.employee.models.EmployBean;
+
+@Service
+public interface EmployeeService {
+
+	public List<EmployBean> listAll() throws EmployeeCustomException ;
+	public List<EmployBean> addEmp(EmployBean employBean) throws EmployeeCustomException ;
+	public EmployBean getEmp(long id) throws EmployeeCustomException ;
+	public void deleteEmp(long id) throws EmployeeCustomException ;
+
+
+}

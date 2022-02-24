@@ -1,0 +1,10 @@
+package com.leave.employee.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TBL_EMPLOYEE")
+public class EmployBean {
+
+}

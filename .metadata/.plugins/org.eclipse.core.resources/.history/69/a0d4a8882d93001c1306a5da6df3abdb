@@ -1,0 +1,48 @@
+package com.leave.employee.models;
+
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TBL_EMPLOYEE")
+public class EmployBean {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long empId;
+	
+	@Column(name = "first_name",nullable = false,updatable = false)
+	private String firstName;
+	
+	private String lastName;
+	
+	private Date joinedDate;
+	
+	private String branchLocation;
+	
+	private String baseLocation;
+	
+	private String email;
+	
+	private String branch;
+	
+	private String role;
+	
+	private Long managerId;
+	
+	
+	
+	
+	
+	
+	
+
+}

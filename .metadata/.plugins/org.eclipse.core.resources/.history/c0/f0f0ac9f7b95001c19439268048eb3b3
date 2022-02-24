@@ -1,0 +1,5 @@
+package com.eurekka.server.NamingServer.contoller;
+
+public class CircuitBreakerControll {
+
+}
